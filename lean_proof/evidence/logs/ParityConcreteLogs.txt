@@ -1,0 +1,6 @@
+'ConditionalParityHashing.log_P_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.log_Q_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.log_T_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.log_one_sub_P_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.log_one_sub_Q_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.log_one_sub_T_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]

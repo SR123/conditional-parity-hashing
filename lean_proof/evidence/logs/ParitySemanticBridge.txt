@@ -1,0 +1,71 @@
+theorem ConditionalParityHashing.almostEntropic_iff_finite_coordinate_approx : ∀ (h : EntropyTable),
+  h ∈ almostEntropicProfiles ↔ ∀ (ε : ℝ), 0 < ε → ∃ n P, ∀ (S : Finset (Fin 4)), |finiteEntropy P S - h S| < ε :=
+fun h =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => _a ↔ ∀ (ε : ℝ), 0 < ε → ∃ n P, ∀ (S : Finset (Fin 4)), |finiteEntropy P S - h S| < ε)
+          (propext Metric.mem_closure_iff)))
+      {
+        mp := fun hh ε hε =>
+          Exists.casesOn (hh ε hε) fun v h_1 =>
+            And.casesOn h_1 fun left hv =>
+              Exists.casesOn left fun n h_2 =>
+                Exists.casesOn h_2 fun P h_3 =>
+                  Eq.ndrec (motive := fun v =>
+                    dist h v < ε → ∃ n P, ∀ (S : Finset (Fin 4)), |finiteEntropy P S - h S| < ε)
+                    (fun hv =>
+                      Exists.intro n
+                        (Exists.intro P fun S =>
+                          have hs := (dist_pi_lt_iff hε).mp hv S;
+                          Eq.mpr (id (congrFun' (congrArg LT.lt (abs_sub_comm (finiteEntropy P S) (h S))) ε)) hs))
+                    (Eq.symm h_3) hv,
+        mpr := fun hh ε hε =>
+          Exists.casesOn (hh ε hε) fun n h_1 =>
+            Exists.casesOn h_1 fun P hP =>
+              Exists.intro (finiteEntropy P)
+                ⟨Exists.intro n (Exists.intro P rfl),
+                  (dist_pi_lt_iff hε).mpr fun S =>
+                    id (Eq.mp (congrFun' (congrArg LT.lt (abs_sub_comm (finiteEntropy P S) (h S))) ε) (hP S))⟩ })
+theorem ConditionalParityHashing.sourceLaw_mass_on_atoms : ∀ (a : Fin 24),
+  sourceLaw.mass (sourceAtoms a) = ↑(sourceWeights a) :=
+fun a =>
+  id
+    (Eq.mpr
+      (id
+        (congrFun'
+          (congrArg Eq
+            (sum_congr (Eq.refl univ) fun x a_1 =>
+              ite_congr
+                ((fun x_0 x_1 => propext ((fun x_0 x_1 => Function.Injective.eq_iff atoms_injective) x_0 x_1)) x a)
+                (fun a => Eq.refl ↑(sourceWeights x)) fun a => Eq.refl 0))
+          ↑(sourceWeights a)))
+      (of_eq_true
+        (Eq.trans
+          (congrFun'
+            (congrArg Eq
+              (Eq.trans (sum_ite_eq' univ a fun x => ↑(sourceWeights x))
+                (ite_eq_left_of_eq_true (↑(sourceWeights a)) 0 (mem_univ._simp_1 a))))
+            ↑(sourceWeights a))
+          (eq_self ↑(sourceWeights a)))))
+theorem ConditionalParityHashing.sourceLaw_zero_off_atoms : ∀ (w : Word4 4),
+  (∀ (a : Fin 24), sourceAtoms a ≠ w) → sourceLaw.mass w = 0 :=
+fun w hw =>
+  id
+    (of_eq_true
+      (Eq.trans
+        (congrFun'
+          (congrArg Eq
+            (Eq.trans
+              (sum_congr (Eq.refl univ) fun x a =>
+                Eq.trans
+                  (ite_congr ((fun a => eq_false (hw a)) x) (fun a => Eq.refl ↑(sourceWeights x)) fun a => Eq.refl 0)
+                  (ite_false (↑(sourceWeights x)) 0))
+              sum_const_zero))
+          0)
+        (eq_self 0)))
+'ConditionalParityHashing.almostEntropic_iff_finite_coordinate_approx' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ConditionalParityHashing.sourceLaw_mass_on_atoms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.sourceLaw_zero_off_atoms' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,25 @@
+lean/PHCollision.lean:3:0: warning: 
+'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+lean/PHCollision.lean:73:10: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/PHCollision.lean:83:13: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Vec, ZMod.card]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/PHCollision.lean:86:18: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Mat, Vec, ZMod.card]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

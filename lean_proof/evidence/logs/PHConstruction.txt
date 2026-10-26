@@ -1,0 +1,30 @@
+lean/PHConstruction.lean:237:0: warning: automatically included section variable(s) unused in theorem `ParityHashing.key_det`:
+  [Fintype Ω₁]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Ω₁] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/PHConstruction.lean:250:0: warning: automatically included section variable(s) unused in theorem `ParityHashing.key_three`:
+  [Fintype Ω₁]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Ω₁] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/PHConstruction.lean:260:0: warning: automatically included section variable(s) unused in theorem `ParityHashing.key_sum02`:
+  [Fintype Ω₁]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Ω₁] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/PHConstruction.lean:267:0: warning: automatically included section variable(s) unused in theorem `ParityHashing.blockSide_mono`:
+  [Fintype Ω₁]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Ω₁] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/PHConstruction.lean:425:0: warning: automatically included section variable(s) unused in theorem `ParityHashing.empty_case`:
+  hp
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hp in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

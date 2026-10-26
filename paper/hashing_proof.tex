@@ -1,0 +1,56 @@
+\section{Proof of the simultaneous hashing lemma}\label{app:hash}
+\begin{proof}
+Fix one pair $(Z,G)$ in the finite list, put $H=H(Z\mid G)$ and
+$\varepsilon=(H-R)/2>0$, and take $n\ge1$.
+For a positive-probability value $g$ of $G^n$, write
+$p(z\mid g)=\Pr(Z^n=z\mid G^n=g)$. Call $(z,g)$ typical when
+$p(z\mid g)\le2^{-n(H-\varepsilon)}$, and let $a_n$ be the probability
+of the typical event. All logarithms in this proof are to base two.
+
+For a fixed binary matrix $M$ define
+\[
+ q_M(z,g)=\Pr(MZ^n=Mz\mid G^n=g).
+\]
+Thus $H(MZ^n\mid G^n)=\E[-\log q_M(Z^n,G^n)]$ is a sum of nonnegative
+terms. Drop the atypical terms and average over a uniform random matrix
+$M$, independently of the source. If $a_n>0$, Jensen's inequality gives
+\[
+ \E_M H(MZ^n\mid G^n)
+ \ge-a_n\log\E\bigl[\E_M q_M(Z^n,G^n)\mid\text{typical}\bigr].
+\]
+Two distinct binary strings collide under a uniform $k\times n$ matrix
+with probability $2^{-k}$: each row has a uniform dot product with their
+nonzero difference, and the rows are independent. Consequently
+\[
+ \E_M q_M(z,g)
+ =\sum_{z'}p(z'\mid g)\Pr_M(Mz'=Mz)
+ \le p(z\mid g)+2^{-k}.
+\]
+On typical pairs the right-hand side is at most
+$2^{-k}(1+2^{k-n(H-\varepsilon)})$. Write $x=2^{k-n(H-\varepsilon)}$. Since $\log_2(1+x)\le x/\ln2$
+and $a_n\le1$, the preceding estimate gives
+\[
+ \E_M H(MZ^n\mid G^n)
+ \ge a_n\bigl(k-\log_2(1+x)\bigr)
+ \ge a_nk-\frac{x}{\ln2}.
+\]
+Subtracting from $k$ and using $k\le nR=n(H-2\varepsilon)$ gives
+\begin{equation}\label{eq:hashbound}
+ \E_M\,[k-H(MZ^n\mid G^n)]
+ \le (1-a_n)k+\frac{2^{k-n(H-\varepsilon)}}{\ln2}
+ \le (1-a_n)nR+\frac{2^{-n\varepsilon}}{\ln2}.
+\end{equation}
+If $a_n=0$, the first bound holds directly from nonnegativity of entropy,
+so no conditioning on a null event is required.
+
+On the finite positive support, $\iota=-\log p(Z\mid G)$ is bounded,
+with mean $H$ and a finite variance $v$. For the $t$th copy put $\iota_t=-\log p(Z_t\mid G_t)$. Independence gives
+$-\log p(Z^n\mid G^n)=\sum_{t=1}^n\iota_t$. Chebyshev's inequality
+therefore yields $1-a_n\le v/(n\varepsilon^2)$. It follows that
+\[
+ \E_M\,[k-H(MZ^n\mid G^n)]\le\frac{vR}{\varepsilon^2}+\frac1{\ln2}.
+\]
+Sum this bound over the finite list. Its sum is a constant independent of
+$n$, and some deterministic matrix has a deficit sum no larger than the
+average. For $n=0$ every key is empty and every deficit is zero.
+\end{proof}

@@ -1,0 +1,224 @@
+\section{Parity subtraction from six privacy tests}\label{sec:general}\label{sec:construction}
+The construction rests on a distinction between an exact algebraic
+relation and the conditional entropy available for hashing. Four local bits
+satisfying one parity relation have three algebraic degrees of freedom.
+A common linear hash preserves that relation, while privacy amplification
+preserves asymptotically one bit of conditional entropy per output bit
+of each missing form. The following theorem gives a sufficient
+condition for turning this structure into entropy subtraction.
+All bit arithmetic below is over $\F$, with addition modulo two.
+
+\begin{samepage}
+\begin{theorem}[Parity-subtraction criterion]\label{thm:general}
+Let $X_A,X_B,X_C,X_D$ be finite random variables with entropy vector $h$.
+Suppose deterministic local labels $Y_i=\chi_i(X_i)\in\F$ satisfy
+$Y_A+Y_B+Y_C+Y_D=0$ almost surely. Put
+$U=Y_A$, $V=Y_B$, $E=Y_A+Y_C$, and let
+\begin{align*}
+ c=\min\{&H(E\mid X_AX_B),\ H(V\mid X_AX_C),\ H(V\mid X_AX_D),\\
+         &H(U\mid X_BX_C),\ H(U\mid X_BX_D),\ H(U\mid X_CX_D)\}.
+\end{align*}
+Then, with $u(S)=\min\{3,|S|\}$,
+\[
+ h-Ru\in\AEcone\qquad(0\le R\le c).
+\]
+No uniformity or independence of the labels is assumed.
+\end{theorem}
+\end{samepage}
+
+Each quantity defining $c$ is a privacy budget: how much randomness
+remains in a missing bit after a pair's complete observations are
+revealed. The minimum is the rate a single hash can achieve in all six
+situations. In particular the criterion concerns the finite source and
+its local labels, rather than its entropy vector alone.
+
+\subsection{Algebraic completion and singleton privacy}
+The parity identity writes the four labels as
+\begin{equation}\label{eq:generalforms}
+ (Y_A,Y_B,Y_C,Y_D)=(U,V,U+E,V+E).
+\end{equation}
+Their coefficient vectors in the formal basis $(U,V,E)$ are
+$(1,0,0),(0,1,0),(1,0,1),(0,1,1)$.
+Any two have rank two, and any three have rank three. These are statements
+about the linear maps, even when the random inputs are dependent.
+For every pair, Table~\ref{tab:basis} gives a missing form $L_{ij}$
+and the explicit completion after hashing. Any other completing binary
+linear form differs by a form known to the pair, so its conditional
+entropy given $X_iX_j$ is the same.
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}ccl@{}}
+\toprule
+Pair & $L_{ij}$ & $(K_A,K_B,K_C)$ from the pair's keys and $N_{ij}=ML_{ij}^n$\\
+\midrule
+$AB$ & $E$ & $(K_A,K_B,K_A+N_{ij})$\\
+$AC$ & $V$ & $(K_A,N_{ij},K_C)$\\
+$AD$ & $V$ & $(K_A,N_{ij},K_A+K_D+N_{ij})$\\
+$BC$ & $U$ & $(N_{ij},K_B,K_C)$\\
+$BD$ & $U$ & $(N_{ij},K_B,N_{ij}+K_B+K_D)$\\
+$CD$ & $U$ & $(N_{ij},N_{ij}+K_C+K_D,K_C)$\\
+\bottomrule
+\end{tabular}
+\caption{The six basis completions. Here $K_i=MY_i^n$ and
+$K_D=K_A+K_B+K_C$. Conversely, $N_{AB}=K_A+K_C$,
+$N_{AC}=N_{AD}=K_B$, and $N_{BC}=N_{BD}=N_{CD}=K_A$.
+These are invertible changes of coordinates, with no distributional assumption.}
+\label{tab:basis}
+\end{table}
+
+The six pair tests also guarantee the four singleton tests needed in the
+proof. Conditioning reduces entropy, and~\eqref{eq:generalforms} gives
+\begin{align}
+ H(Y_B\mid X_A)&\ge H(V\mid X_AX_C)\ge c,\notag\\
+ H(Y_A\mid X_B)&\ge H(U\mid X_BX_C)\ge c,\notag\\
+ H(Y_D\mid X_C)&\ge H(Y_D\mid X_AX_C)=H(V\mid X_AX_C)\ge c,\label{eq:siximplyten}\\
+ H(Y_C\mid X_D)&\ge H(Y_C\mid X_BX_D)=H(U\mid X_BX_D)\ge c.\notag
+\end{align}
+For the third line, $(X_A,X_C)$ fixes $E$, so $Y_D=V+E$ has the
+same conditional entropy as $V$. The fourth line uses
+$Y_C=U+Y_B+Y_D$, with $Y_B,Y_D$ fixed by $(X_B,X_D)$.
+All side information here consists of the full observed variables.
+
+\subsection{One linear hash for every test}
+We use the following finite-alphabet form of conditional privacy
+amplification~\cite{BBCM,Csiszar96,RW}. Its elementary proof is included
+in Appendix~\ref{app:hash}.
+
+\begin{samepage}
+\begin{lemma}[Simultaneous linear hashing]\label{lem:hash}
+Let $(Z_\ell,G_\ell)$, $1\le\ell\le q$, be a nonempty finite list of
+functions on one finite
+probability space, with $Z_\ell\in\F$ and $G_\ell$ finite. Suppose
+$0\le R<\min_\ell H(Z_\ell\mid G_\ell)$.
+Take $n$ independent copies of this joint space and let $k=\lfloor nR\rfloor$.
+For a binary $k\times n$ matrix $M$ put
+\[
+ \Delta_\ell(M)=k-H(MZ_\ell^n\mid G_\ell^n)\ge0,
+\]
+where entropy is evaluated at the fixed matrix $M$.
+There is a constant $C$, independent of $n$, such that for every $n$
+some matrix $M_n$ satisfies $\sum_\ell\Delta_\ell(M_n)\le C$.
+\end{lemma}
+\end{samepage}
+
+The pairs in the list may be arbitrarily dependent. A small normalised
+deficit means that the hashed bit sequence retains nearly its full
+entropy per source copy, even with the complete side information.
+A random binary matrix makes two distinct strings collide with probability
+$2^{-k}$. Jensen's inequality and this collision identity bound the
+expected deficit; a conditional typicality estimate makes the bound
+independent of $n$. Summing the nonnegative deficits selects one matrix
+for the whole list. Using the same matrix is essential because unrelated
+hashes would not preserve the parity identity. The proof in
+Appendix~\ref{app:hash} follows the bounded-deficit route used in Lean.
+
+\begin{lemma}[Conditional entropy profiles]\label{lem:cone}
+The almost-entropic region is a closed convex cone. If
+$X_A,X_B,X_C,X_D,W$ are finite random variables, then
+$S\mapsto H(X_S\mid W)$ belongs to $\AEcone$.
+\end{lemma}
+\begin{proof}
+The cone property is classical~\cite[Theorem~1]{ZY}; we recall the
+argument needed here. Independent products add entropy vectors.
+For an entropic vector $f$ and $\alpha>0$, take an integer $m>\alpha$,
+$m$ independent realisations of $f$, and an independent flag with
+probability $\alpha/m$ of being one. At each coordinate retain the flag
+and, when it is one, all $m$ samples; otherwise retain a constant.
+Each nonempty subset entropy is $\hb(\alpha/m)+\alpha f(S)$, which tends
+to $\alpha f(S)$. Approximation and closedness extend addition and scaling
+to the closure, giving convexity.
+Finally
+\[
+ H(X_S\mid W)=\sum_{w:\Pr(W=w)>0}\Pr(W=w)H(X_S\mid W=w)
+\]
+is a finite convex combination of entropy vectors of conditional laws.
+This also explains the contraction operation of~\cite[Lemma~1]{MC}.
+\end{proof}
+
+\subsection{Accounting for all fifteen entropy losses}
+\begin{proof}[Proof of Theorem~\ref{thm:general}]
+Null atoms may be discarded. If $c=0$ only $R=0$ is at issue; otherwise
+fix $0<R<c$ and $k=\lfloor nR\rfloor$.
+Form every block variable from the same $n$ independent copies of the
+original four-variable source.
+Apply Lemma~\ref{lem:hash} to the six pairs $(L_{ij},X_iX_j)$ and the
+four label--singleton pairs in~\eqref{eq:siximplyten}. Select one common
+matrix $M=M_n$. Define
+\[
+ K_i=MY_i^n,\qquad W=(K_A,K_B,K_C),
+\]
+and the nonnegative deficits
+\begin{align}
+ \Delta_{ij}&=k-H(ML_{ij}^{\,n}\mid X_i^nX_j^n),\notag\\
+ \delta_i&=k-H(K_{j(i)}\mid X_i^n),\qquad
+ j(A)=B,\ j(B)=A,\ j(C)=D,\ j(D)=C,\label{eq:deficits}\\
+ D_n&=\sum_{ij}\Delta_{ij}+\sum_i\delta_i\le C.\notag
+\end{align}
+Here $ij$ ranges over unordered pairs.
+The common map gives $K_D=K_A+K_B+K_C$ exactly.
+For every pair $ij$, basis completion is an invertible change of
+coordinates between $W$ and $(K_i,K_j,ML_{ij}^{\,n})$.
+Since $K_i,K_j$ are known from $X_i^nX_j^n$, this gives the exact identity
+\begin{equation}\label{eq:pairs}
+ H(W\mid X_i^nX_j^n)=H(ML_{ij}^{\,n}\mid X_i^nX_j^n)=k-\Delta_{ij}.
+\end{equation}
+
+For a singleton $i$, use its partner $j=j(i)$ in~\eqref{eq:deficits}.
+The same basis change and the chain rule give
+\begin{align*}
+ H(W\mid X_i^n)
+ &=H(K_j\mid X_i^n)+H(ML_{ij}^{\,n}\mid X_i^n,K_j)\\
+ &\ge k-\delta_i+H(ML_{ij}^{\,n}\mid X_i^n,X_j^n)
+ =2k-\delta_i-\Delta_{ij}.
+\end{align*}
+The inequality holds because $K_j$ is a function of $X_j^n$.
+The upper bound is $2k$, since $K_i$ is already known.
+Any triple determines $W$, so larger observed sets leave no uncertainty.
+
+To bound $H(W)$ itself, use the invertible change
+$W\leftrightarrow(K_A,K_B,ME^n)$ and condition each chain-rule term
+on the corresponding full observations:
+\begin{align*}
+ H(W)&=H(K_A)+H(K_B\mid K_A)+H(ME^n\mid K_A,K_B)\\
+ &\ge H(K_A\mid X_B^n)+H(K_B\mid X_A^n)
+                  +H(ME^n\mid X_A^nX_B^n)\\
+ &=3k-\delta_B-\delta_A-\Delta_{AB}.
+\end{align*}
+Also $H(W)\le3k$. Thus $H(W)=3k-d_0$ and
+$H(W\mid X_i^n)=2k-d_i$, with $0\le d_0,d_i\le D_n$.
+The complete entropy accounting is
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Observed subset size & $1$ & $2$ & $3$ or $4$\\
+\midrule
+$H(W\mid X_S^n)$ & $2k-d_i$ & $k-\Delta_{ij}$ & $0$\\
+$H(W)-H(W\mid X_S^n)$ & $k+O(1)$ & $2k+O(1)$ & $3k+O(1)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Since $H(X_S^n)=nh(S)$ by independence of the copies, the identity
+\[
+ H(X_S^n\mid W)=nh(S)-H(W)+H(W\mid X_S^n)
+\]
+now proves, for all fifteen nonempty subsets,
+\begin{equation}\label{eq:all15}
+ \left|H(X_S^n\mid W)-\bigl(nh(S)-ku(S)\bigr)\right|\le D_n.
+\end{equation}
+The errors are $d_0-d_i$ for singletons, $d_0-\Delta_{ij}$ for pairs,
+and $d_0$ for larger sets; each absolute value is at most $D_n$.
+
+\smallskip\noindent\emph{Passing to an almost-entropic vector.}
+For each finite $n$, let $p_w=\Pr(W=w)$ and let $h_w$ be the entropy
+vector of the four blocks conditioned on $W=w$. The conditional profile
+is the finite average
+\[
+ \bar h_n(S)=H(X_S^n\mid W)=\sum_{w:p_w>0}p_w h_w(S).
+\]
+Lemma~\ref{lem:cone} gives $\bar h_n/n\in\AEcone$. Dividing~\eqref{eq:all15} by $n$, with $k/n\to R$ and $D_n/n\to0$,
+gives $\bar h_n/n\to h-Ru$ coordinatewise. Closedness proves membership
+for $0<R<c$, then for $R=c$ by taking $R\uparrow c$. The case $R=0$
+is immediate. This passage uses an average of conditional profiles;
+a single conditioning value is not required to realise that average.
+\end{proof}
+

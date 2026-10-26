@@ -1,0 +1,14 @@
+lean/ParityCandidate.lean:53:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+lean/ParityCandidate.lean:65:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ConditionalParityHashing.candidate_score_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.candidate_total_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+def ConditionalParityHashing.FullParityHashingResult : Prop :=
+(∀ (R : ℝ), 0 ≤ R → R ≤ criticalRate → shiftedProfile R ∈ almostEntropicProfiles) ∧
+  0 < candidate univ ∧
+    -97387436923 / 1000000000000 ≤ paperJ candidate / candidate univ ∧
+      paperJ candidate / candidate univ ≤ -97387436922 / 1000000000000 ∧
+        ∃ n law, 0 < finiteEntropy law univ ∧ paperJ (finiteEntropy law) / finiteEntropy law univ < -9738 / 100000

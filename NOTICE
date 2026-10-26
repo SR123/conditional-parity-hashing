@@ -1,0 +1,12 @@
+Conditional parity hashing — 2026
+Creator and coordinator: Søren Riis.
+Research direction and outline: Søren Riis.
+Mathematical development, computation and verification: Astra/Codex and Claude.
+Claude contributed Lean formalisation and adversarial review; Astra/Codex
+checked the formal statements and rebuilt the proof package.
+These AI-assisted checks do not constitute independent human peer review.
+The Matúš–Csirmaz source and earlier entropy, coding, privacy-amplification
+and conditioning methods are credited in the manuscript.
+
+Apache-2.0 applies to code and Lean sources. CC BY 4.0 applies to paper/.
+See LICENSE, LICENSE-PAPER.txt and README.txt for the component scopes.

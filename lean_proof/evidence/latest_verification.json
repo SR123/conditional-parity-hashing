@@ -1,0 +1,1566 @@
+{
+  "status": "FULL_MAIN_THEOREM_KERNEL_CHECKED",
+  "checked_at_UTC": "20261026T085208961653Z",
+  "compiler_version": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "modules_rebuilt": [
+    {
+      "module": "PHCollision",
+      "source_sha256": "cfcb9e396ea7c61be79883740500e740a2126ef5e8f7a369165c98e24e6d5657",
+      "olean_sha256": "516c1bbf212457b48249448d17975e4e12484594e43cf0fda4cf86ea7ab1176c",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteLaw",
+      "source_sha256": "36c49cb4934d6c85b8587a5a50736feef3dc83fc2f577e19e1d975437ed80c7b",
+      "olean_sha256": "ab8053c1da12f9967d62e5f718d46acad486f0fc46542271c741e9cf487d4a51",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteInformation",
+      "source_sha256": "ffc098900bd01b460ad38cb91aeacb00a24b40c1f879528febdee8886268e25e",
+      "olean_sha256": "8b914b9ad681e2029aec3073a24a88008ae98f5dd4e788fbe4307c3ea27912ab",
+      "exit_code": 0
+    },
+    {
+      "module": "FiniteShannon",
+      "source_sha256": "e13e095a2ae315240855745659b42c448bb18afd63c278ba9334ef9af0fa2c68",
+      "olean_sha256": "0cd8065a554845931495a02ab8147ebbfb904dc9fca8840a513439625be550c6",
+      "exit_code": 0
+    },
+    {
+      "module": "PHFiniteHash",
+      "source_sha256": "20885d9d5636b1b5bb0d6e28a647c26e70235a9b3c40bb8aa5851b91bb43285f",
+      "olean_sha256": "53e520314e92d885e1929eae13d992c224744049b4bf8567c578cce1ddbf789f",
+      "exit_code": 0
+    },
+    {
+      "module": "PHIid",
+      "source_sha256": "27f4950e1459bc9790a6ff4250c852c308b1ef7aaaf170121aa57b9a11f4b50f",
+      "olean_sha256": "530279e7932d207bfc2bae49cf0ac562a8f78e6ed6160385674f3395cf6cac34",
+      "exit_code": 0
+    },
+    {
+      "module": "PHAsymptotic",
+      "source_sha256": "a7154fbeca061ebaf3acb19f3c11b189cff6d4af3e90b9a8dfc8872afd44f3a7",
+      "olean_sha256": "f2bed08745cec23c5a93331a06d35c51281510e715037eac7d2d389296913400",
+      "exit_code": 0
+    },
+    {
+      "module": "PHConstruction",
+      "source_sha256": "7a021e852a899a83d8a16b51e557695efda74ed573dfbc5a12b56eb594a9a645",
+      "olean_sha256": "28a4ed721bd686d8c1daaa1a94dd31f2d9ad4d07ec09cfc72a8d7149b1ef3642",
+      "exit_code": 0
+    },
+    {
+      "module": "Balanced",
+      "source_sha256": "e4c568558de7f7876855cb566a19d13408f641548838178a45652eac2af15e7c",
+      "olean_sha256": "18badb7ace9b43497892fd08af9de216f664c929848b21cd20082392883a2be3",
+      "exit_code": 0
+    },
+    {
+      "module": "PHCone",
+      "source_sha256": "adcd2b3d9b138037e4d58e8c98eebf9689265a16e9df1c1dda276dcb93bb79b4",
+      "olean_sha256": "f3acd7ab4d89339e9d3a94c4894f297e475f6204481f14e338d8b1b4ba6201ce",
+      "exit_code": 0
+    },
+    {
+      "module": "PHConditional",
+      "source_sha256": "fd2e1e21c6e75deb5c3ee3b78dd9b6833bebe1646e5a7b5efc95662f62cd24e4",
+      "olean_sha256": "6297f49ebf227a9eae68f905752ce67e1ec941363d5fd44d71491d2eec282e4a",
+      "exit_code": 0
+    },
+    {
+      "module": "PHMain",
+      "source_sha256": "078595f8c2c8a76061b927620ccad119dd72f8271d264efdbb8632ebb4767a06",
+      "olean_sha256": "f0b47cdd471a7ec1e7453e4954b87e8a08fd670004cb6844b0f37ef2569efa2d",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityFiniteSource",
+      "source_sha256": "632785159f4330cb6df334df0a8e1185b60eec656f01983d320848872571c919",
+      "olean_sha256": "b1ed36e641b1c7979c19fd3e079cbf204eb29b18d9cbee237dfe3ca3b8cd3acf",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityLogBounds",
+      "source_sha256": "887a98304e213bdad715a679401ba5bd6766c33648cb45b959a9ce418088a613",
+      "olean_sha256": "f6b3d7a9ee5e5910e6dcea0c744d52a7d1351296bce85eb55db705ad637b65fc",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "source_sha256": "7962b1f29e0f1283cbb53997d8b641923901bf94048595af1ce3702343cabade",
+      "olean_sha256": "cb6fb2aa2cbb419789a3eadd183a9ebc366b66757f6b1969d08a91739ae39b10",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityScore",
+      "source_sha256": "0145f1f05ff9f93d4492921a67f07f8bcacc5dadbe309647a00a2c88c6b62f07",
+      "olean_sha256": "04404a82a4218f4cfc1e59d95c1d83de8559baa1ac12cd38757b7d7f66316027",
+      "exit_code": 0
+    },
+    {
+      "module": "ParitySourceEntropy",
+      "source_sha256": "b6e543aa8704f2b2d2b471885c5b09f25cbef986e9b763fb863dc09a06a04d86",
+      "olean_sha256": "51d31982444db2b354fd9aaf4bf9be793dcee864d2c08052374a7c93fef17d0d",
+      "exit_code": 0
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "source_sha256": "9f8cb07f6614de7b72bc3afc32a083dff57db36a56484bbf4a4dd7d4aa1263e4",
+      "olean_sha256": "b8f2262ddf1abaa7cecc648d9e5600797254fccb4952d617a92e002c637ead77",
+      "exit_code": 0
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "source_sha256": "d37e175c13118544ab07c3daf1300a25400567d8dd66a61f21994606f6212757",
+      "olean_sha256": "f6804e693827ca393f182b96f547d90ce6a3404b67f5964f33519aed82292820",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityCandidate",
+      "source_sha256": "2b059bd848e278e40461323ca6edc92edf068761cd3960c5588fc01b67421273",
+      "olean_sha256": "b8dfefee2123361a8cb494dd7d5c06339a7e71b68ad9f16037d01f9995234512",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityClosureConsequences",
+      "source_sha256": "52f00d66ff6c42c76f9bae35cff66147559e09c8d81a450218adf2ab87902a86",
+      "olean_sha256": "b9a5f1110aaef3953f4b033ce7f5adc98444586662b7ac08c9a6c3dce0075b43",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityEndpoint",
+      "source_sha256": "dd35e2a3680bd9b6ef3ce0e49c4d28e2893f00f831a83d3dd23199e47de48084",
+      "olean_sha256": "5cc6aa54114372a8ce764ee8568b51c4b47879294776e4c28be7ef8c385f2e4f",
+      "exit_code": 0
+    },
+    {
+      "module": "PHSourceBridge",
+      "source_sha256": "7c04efb76c194e97629ea06bc2a442166275ae0c517ad49f59b760119dd715ae",
+      "olean_sha256": "1d3e2130445a5ea32b6751fd0debafb0a002f8efff24f212f72e9f80bf99f7ac",
+      "exit_code": 0
+    },
+    {
+      "module": "ParityPaperCorrespondence",
+      "source_sha256": "e9937f479da6ff20dc8d519caafe8583179b6df19f167d9b4cd685855e4f8d12",
+      "olean_sha256": "d34c1b17edbc317bf6ae33fd4f354e8e7bb6d13ab7f95a2c8df164189e109ec8",
+      "exit_code": 0
+    },
+    {
+      "module": "CertifiedMain",
+      "source_sha256": "c0b6438f6ece5393c6af60628d304344fea8e56447b71a81f3fe645f33a65e7c",
+      "olean_sha256": "6dc9f9a93bed479db9db02efa8c08c55ea559eacd6840e94e42f2c4b483fd6e2",
+      "exit_code": 0
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "source_sha256": "2951fd165db715a2024a3563dcc777a115821d1d8d812e53e334f0a9d3342977",
+      "olean_sha256": "98082fc56043c35267a716f1d9bc954d18958f41c2ea134e1e899125f9e68de2",
+      "exit_code": 0
+    },
+    {
+      "module": "ParitySemanticBridge",
+      "source_sha256": "f7d409a3dffdf55a86da054f2b486ff49f1749320e874bb05aff7ba2869f2e08",
+      "olean_sha256": "31a3b425359b191f49c7dbab32d0938317c206a56113118aa71af54f58f40444",
+      "exit_code": 0
+    },
+    {
+      "module": "Verification",
+      "source_sha256": "7ea4b34b8eb93bf64b0737598c9a165011ed66496d01db82ce4c6c3b21653648",
+      "olean_sha256": "7104b315996a90b166d926f726470d702140dd84671a9bbed6cecd4028ff797c",
+      "exit_code": 0
+    }
+  ],
+  "declarations_audited": 281,
+  "axioms_by_declaration": {
+    "ConditionalParityHashing.certified_main": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_le_log_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_le_entropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_le_log_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_vec_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.hash_deficit_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.selfInfo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.expect_selfInfo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.selfInfoVar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.blockZ": [],
+    "ParityHashing.blockS": [],
+    "ParityHashing.one_sub_typicalMass_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.exists_le_of_sum_le_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.uniform_deficit_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.Vec": [],
+    "ParityHashing.Mat": [],
+    "ParityHashing.dot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mulVec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zmod2_cases": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zmod2_add_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zmod2_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zmod2_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.vec_add_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.vec_eq_iff_add_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.dot_add_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.dot_add_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.dot_single": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mulVec_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.card_vec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.card_mat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.two_mul_card_dot_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.card_mat_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.card_collide_mul_pow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.card_collide_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_eq_sum_ite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condMass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condMass_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condMass_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_condMass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_decomp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.blockCode": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteEntropy_condLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condTable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condTable_eq_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condTable_mem_ae": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteTables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.aeTables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pushLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteEntropy_pushLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pushLaw4_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_indep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_indep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.prodLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteEntropy_prodLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteTables_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteTables_nsmul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.hbBits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.flagTable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.flagLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_restrict_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finiteEntropy_flagLaw4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.tendsto_hbBits_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zero_mem_finiteTables": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.smul_finite_mem_ae": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.ae_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.ae_smul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.ae_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_congr_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_congr_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_eq_zero_of_determined": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_mono_of_determined": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.entropy_triple_chain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_swap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_const": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.vec_solve_last": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.vec_solve_mid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.vec_solve_first": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.zmod2_xor_last": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sideInfo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.parity": [],
+    "ParityHashing.key": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.auxW": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.blockSide": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pairZ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pairSet": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pairS": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.deficit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.key_det": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.key_three": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.key_sum02": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.blockSide_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.deficit_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.deficit_subsum_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_pair_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.entropy_W_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.entropy_W_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.pair_case": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.single_case": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.det_case": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.empty_case": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.deficit_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.deficit_three_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cond_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.block_profile_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_explicit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.jensen_log": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_at_eq_of_fibers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_pair_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_atom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_term_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_ge_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.condEnt_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.typicalSet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.typicalMass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.typicalMass_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.typicalMass_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sum_hashed_cell_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sum_condEnt_hash_ge": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.log_threshold_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.avg_deficit_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.prodMass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.prodMass_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sum_prod_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.expect_prod_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.prodMass_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.expect_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.expect_two_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.expect_sq_sum_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.chebyshev_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.cellMass_prod_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.mapEntropyNats_prod_coord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.u34": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sourceTable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sourceTable_eq_finiteEntropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sourceTable_mem_ae": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.floor_div_close": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.parity_hashing_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.parity_hashing_mem_ae": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.ingletonJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.continuous_ingletonJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.finite_witness_of_ae": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.srcP": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.srcX": [
+      "propext"
+    ],
+    "ConditionalParityHashing.srcPi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.srcP_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.srcP_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log2_pos'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_xor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.zcast_inj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sideInfo_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.side_entropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.atoms_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.full_entropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.entropy_of_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.inj0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.inj1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.inj4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.inj5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.joint_AD_V": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.joint_BC_U": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.cellMass_partner": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.partner_entropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.crit_log": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.side_pair_entropy_AB": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.numeric_facts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.thr_partner": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_thresholds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_sourceTable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_u34": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_shifted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.aeTables_eq_almost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.src_strict_rates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.full_parity_hashing_result": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceProfile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.parityRank": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.criticalRate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.shiftedProfile": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.paperJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.paperJ_rank": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.paperJ_shift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.univ_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.criticalRate_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.paperJ_source_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_total_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_total_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_score_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_score_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.FullParityHashingResult": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.continuous_paperJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.finite_score_of_candidate_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_P_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_Q_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_T_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_one_sub_P_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_one_sub_Q_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_one_sub_T_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.criticalRate_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.criticalRate_lt_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.shiftedProfile_continuous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_mem_of_strict_rates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.full_result_of_strict_rates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceAtoms": [
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceWeights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceWeights_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceWeights_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceLaw": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.chi": [
+      "propext"
+    ],
+    "ConditionalParityHashing.source_parity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceCell": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_partner_uniform": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_two_enclosure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.criticalRate_is_CMI": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.parityRank_is_U34": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.candidate_eight_decimal_rounding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.P": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.Q": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.T": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.binaryNats": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceHNats": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.scoreNumeratorNats": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.scoreDenominatorNats": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.scoreFormula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.score_denominator_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.score_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.score_below_threshold": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.score_nats_bits": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_quarter": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_eighth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_P_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_P_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_Q_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_T_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_one_sub_P_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_one_sub_Q_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.log_mass_one_sub_T_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_A": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_B": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_AB": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_C": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_AC": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_BC": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_ABC": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_D": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_AD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_BD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_ABD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_CD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_ACD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_BCD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_ABCD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceLaw_cell": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceLaw_mapEntropy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.source_entropy_atoms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sideInfo_single_label": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.sideInfo_coarsen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.partner_C_given_AC": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.partner_D_given_BD": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.six_thresholds_imply_ten": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ParityHashing.parity_hashing_six_conditions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.almostEntropic_iff_finite_coordinate_approx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceLaw_mass_on_atoms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ConditionalParityHashing.sourceLaw_zero_off_atoms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SharpStability.finiteEntropyProfiles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SharpStability.almostEntropicProfiles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SharpStability.finite_profile_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SharpStability.finite_profiles_subset_almost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SharpStability.finite_profile_almost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "main_theorem": "ConditionalParityHashing.certified_main",
+  "main_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "elapsed_seconds": 463.1,
+  "compiled_research_inputs": "none: fresh per-run directory; dependency-project research outputs excluded",
+  "logs_directory": "build/20261026T085208961653Z/logs"
+}

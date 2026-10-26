@@ -1,0 +1,56 @@
+\section{Generating a finite four-variable distribution}\label{sec:recipe}
+The source table is already an explicit small distribution, but its
+ordinary score is only about $-0.08365470562$. The score near
+$-0.09738744$ belongs to the limiting vector $z$. We now describe actual
+finite distributions which exceed the stated threshold, by selecting a conditional law.
+
+Fix the strictly subcritical rational rate
+\[
+ R_0=\frac{371}{2000}=0.1855<b.
+\]
+The same exact entropy formulas certify
+\[
+ \frac{\Ing(h-R_0u)}{(h-R_0u)(N)}
+ =-0.09738145760031\ldots<-0.09738.
+\]
+For all sufficiently large $n$, the matrix selected in the proof has a
+conditional average profile with positive total entropy and score below
+$-0.09738$. Let $h_w$ be the entropy vector of the four blocks given
+$W=w$, and write $p_w=\Pr(W=w)$. Its average is
+$\bar h=\sum_w p_w h_w$. The exact identity
+\[
+ \frac{\Ing(\bar h)}{\bar h(N)}
+ =\sum_{w:h_w(N)>0}
+    \frac{p_w h_w(N)}{\bar h(N)}
+    \frac{\Ing(h_w)}{h_w(N)}
+\]
+shows that at least one positive-entropy fibre has score no larger than
+the average. Fibres with $h_w(N)=0$ have all subset entropies and
+$\Ing(h_w)$ equal to zero. This selects a fibre for the scalar score;
+it does not make its fifteen coordinates equal to the average profile.
+
+Once such $n$, $k=\lfloor nR_0\rfloor$, $M$ and $w$ have been chosen,
+the following is an exact sampling recipe.
+\begin{enumerate}[leftmargin=*]
+\item Independently at each of $n$ positions, choose a column with
+probabilities $(P,Q,T)$ and a uniform row among the eight table rows.
+Read off $(X_{A,t},X_{B,t},X_{C,t},X_{D,t})$.
+\item Compute $K_i=M(\chi(X_{i,1}),\ldots,\chi(X_{i,n}))^{\mathsf T}$
+over $\F$, for $i=A,B,C$, and set $W=(K_A,K_B,K_C)$.
+\item Retain the entire trial exactly when $W=w$; otherwise repeat it.
+Output the four retained words, each in $\{0,1,2,3\}^n$.
+\end{enumerate}
+This rejection sampler terminates almost surely because $p_w>0$.
+For four words $x=(x_A,x_B,x_C,x_D)$, if $\pi$ is the one-letter
+rational table law, the output law is exactly
+\[
+ \Pr(X_A'=x_A,X_B'=x_B,X_C'=x_C,X_D'=x_D)
+ =\frac{\mathbf1\{W(x)=w\}}{p_w}
+      \prod_{t=1}^n\pi(x_{A,t},x_{B,t},x_{C,t},x_{D,t}).
+\]
+In particular all its probabilities are rational.
+
+The proof guarantees suitable finite choices, but a practical block
+length, matrix and fibre have not been computed. The strict rate
+$R_0<b$ leaves a small privacy margin; no efficiency bound is claimed.
+

@@ -1,0 +1,19 @@
+PAPER AND MANUSCRIPT LICENCE
+
+Copyright (c) 2026 Søren Riis.
+
+The paper PDF, its manuscript sources and original figures in paper/ are
+licensed under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0; SPDX identifier CC-BY-4.0).
+
+Licence summary: https://creativecommons.org/licenses/by/4.0/
+Full legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Credit Søren Riis as creator/coordinator, retain the contribution and AI-use
+statement, cite the paper and its version, link to the licence and indicate
+changes as required by the licence. The established mathematical sources
+are credited in the paper; no endorsement by those researchers is implied.
+
+Code, Python checkers, build scripts and Lean proof sources are separately
+licensed under Apache License 2.0, in LICENSE. Downloaded dependencies are
+not distributed here and retain their own licences.

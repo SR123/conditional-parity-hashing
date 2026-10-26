@@ -1,0 +1,3 @@
+'ConditionalParityHashing.criticalRate_is_CMI' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.parityRank_is_U34' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.candidate_eight_decimal_rounding' depends on axioms: [propext, Classical.choice, Quot.sound]

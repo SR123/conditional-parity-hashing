@@ -1,0 +1,21 @@
+\section{Exact numerical enclosure}\label{app:numerical}
+The following rational computation certifies~\eqref{eq:scorebox}; it does
+not enter the membership proof. For a rational $x\in[1,2]$ put
+$y=(x-1)/(x+1)$ and
+\begin{equation}\label{eq:series}
+ \ell_m(x)=2\sum_{j=0}^{m-1}\frac{y^{2j+1}}{2j+1},\qquad
+ 0\le\ln x-\ell_m(x)\le
+ \frac{2y^{2m+1}}{(2m+1)(1-y^2)}.
+\end{equation}
+This is the positive series for $2\operatorname{arctanh}y$, with its tail
+bounded geometrically. For each positive rational argument $w$, write
+$w=2^\ell x$, $1\le x<2$, and enclose
+$\log_2w=\ell+\ln x/\ln2$ using~\eqref{eq:series} with $m=42$ for $x$
+and $2$. Rational interval arithmetic in~\eqref{eq:b},
+\eqref{eq:Jformula} and~\eqref{eq:den} gives~\eqref{eq:scorebox}.
+The accompanying \texttt{verify\_paper.py} implements exactly this recipe
+using only rational arithmetic from the Python standard library and also
+checks the finite source identities. The displayed decimal bounds are
+outward rounded; the exact entropy expressions define the point.
+
+The Lean proof independently encloses the same logarithms with Mathlib's $20$-term artanh-series bounds. Both calculations are rigorous.

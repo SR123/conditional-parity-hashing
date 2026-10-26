@@ -1,0 +1,12 @@
+.lake/
+lean_proof/build/
+__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+.DS_Store

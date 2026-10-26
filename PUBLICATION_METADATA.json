@@ -1,0 +1,20 @@
+{
+  "title": "An almost-entropic Ingleton score below -0.09738: Conditional hashing of a binary parity structure",
+  "creators": [
+    {
+      "name": "Riis, Søren",
+      "role": "creator/coordinator"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-10-26",
+  "resource_type": "preprint",
+  "doi": "10.5281/zenodo.23662511",
+  "repository": "https://github.com/SR123/conditional-parity-hashing",
+  "reader_page": "https://sr123.github.io/conditional-parity-hashing/",
+  "licenses_by_scope": {
+    "paper": "CC-BY-4.0",
+    "code": "Apache-2.0"
+  },
+  "main_theorem": "ConditionalParityHashing.certified_main"
+}

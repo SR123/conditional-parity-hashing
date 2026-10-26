@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the paper using preferred-citation below; the repository also contains its Lean proof and exact checkers."
+type: software
+title: "Conditional parity hashing: paper, Lean proof and exact checkers"
+authors:
+  - family-names: "Riis"
+    given-names: "Søren"
+version: "1.0.0"
+date-released: "2026-10-26"
+url: "https://github.com/SR123/conditional-parity-hashing"
+repository-code: "https://github.com/SR123/conditional-parity-hashing"
+doi: "10.5281/zenodo.23662511"
+license: Apache-2.0
+abstract: "Code and Lean proof sources are Apache-2.0; the paper and manuscript sources are CC BY 4.0. Søren Riis is the creator/coordinator. AI contributions are described in the paper."
+keywords:
+  - entropy region
+  - Ingleton inequality
+  - privacy amplification
+  - Lean
+preferred-citation:
+  type: unpublished
+  title: "An almost-entropic Ingleton score below -0.09738: Conditional hashing of a binary parity structure"
+  authors:
+    - family-names: "Riis"
+      given-names: "Søren"
+  year: 2026
+  date-released: "2026-10-26"
+  version: "1.0.0"
+  doi: "10.5281/zenodo.23662511"
+  url: "https://doi.org/10.5281/zenodo.23662511"

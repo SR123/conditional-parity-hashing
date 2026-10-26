@@ -1,0 +1,70 @@
+lean/FiniteShannon.lean:80:0: warning: automatically included section variable(s) unused in theorem `SharpStability.cellMass_triple_row`:
+  [Fintype α]
+  [Fintype γ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] [Fintype γ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/FiniteShannon.lean:92:31: warning: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, hf, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:94:27: warning: This simp argument is unused:
+  hf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, Ne.symm hf, hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:95:27: warning: This simp argument is unused:
+  hf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, Ne.symm hf, hz, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:95:43: warning: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, hf, Ne.symm hf, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:97:0: warning: automatically included section variable(s) unused in theorem `SharpStability.cellMass_triple_col`:
+  [Fintype β]
+  [Fintype γ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype β] [Fintype γ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+lean/FiniteShannon.lean:109:31: warning: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, hg, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:111:27: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, Ne.symm hg, hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:112:27: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, Ne.symm hg, hz, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+lean/FiniteShannon.lean:112:43: warning: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Prod.mk.injEq, hg, Ne.symm hg, Ne.symm hz, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

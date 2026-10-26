@@ -1,0 +1,1556 @@
+{
+  "status": "FRESH_STANDALONE_KERNEL_CHECKED",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "build_order": [
+    "PHCollision",
+    "FiniteLaw",
+    "FiniteInformation",
+    "FiniteShannon",
+    "PHFiniteHash",
+    "PHIid",
+    "PHAsymptotic",
+    "PHConstruction",
+    "Balanced",
+    "PHCone",
+    "PHConditional",
+    "PHMain",
+    "ParityFiniteSource",
+    "ParityLogBounds",
+    "ParityConcreteLogs",
+    "ParityScore",
+    "ParitySourceEntropy",
+    "ParitySourceCoordinates",
+    "AlmostEntropicClosure",
+    "ParityCandidate",
+    "ParityClosureConsequences",
+    "ParityEndpoint",
+    "PHSourceBridge",
+    "ParityPaperCorrespondence",
+    "CertifiedMain",
+    "SixThresholdCriterion",
+    "ParitySemanticBridge",
+    "Verification"
+  ],
+  "sources": [
+    {
+      "path": "lean/PHCollision.lean",
+      "source_sha256": "cfcb9e396ea7c61be79883740500e740a2126ef5e8f7a369165c98e24e6d5657"
+    },
+    {
+      "path": "lean/FiniteLaw.lean",
+      "source_sha256": "36c49cb4934d6c85b8587a5a50736feef3dc83fc2f577e19e1d975437ed80c7b"
+    },
+    {
+      "path": "lean/FiniteInformation.lean",
+      "source_sha256": "ffc098900bd01b460ad38cb91aeacb00a24b40c1f879528febdee8886268e25e"
+    },
+    {
+      "path": "lean/FiniteShannon.lean",
+      "source_sha256": "e13e095a2ae315240855745659b42c448bb18afd63c278ba9334ef9af0fa2c68"
+    },
+    {
+      "path": "lean/PHFiniteHash.lean",
+      "source_sha256": "20885d9d5636b1b5bb0d6e28a647c26e70235a9b3c40bb8aa5851b91bb43285f"
+    },
+    {
+      "path": "lean/PHIid.lean",
+      "source_sha256": "27f4950e1459bc9790a6ff4250c852c308b1ef7aaaf170121aa57b9a11f4b50f"
+    },
+    {
+      "path": "lean/PHAsymptotic.lean",
+      "source_sha256": "a7154fbeca061ebaf3acb19f3c11b189cff6d4af3e90b9a8dfc8872afd44f3a7"
+    },
+    {
+      "path": "lean/PHConstruction.lean",
+      "source_sha256": "7a021e852a899a83d8a16b51e557695efda74ed573dfbc5a12b56eb594a9a645"
+    },
+    {
+      "path": "lean/Balanced.lean",
+      "source_sha256": "e4c568558de7f7876855cb566a19d13408f641548838178a45652eac2af15e7c"
+    },
+    {
+      "path": "lean/PHCone.lean",
+      "source_sha256": "adcd2b3d9b138037e4d58e8c98eebf9689265a16e9df1c1dda276dcb93bb79b4"
+    },
+    {
+      "path": "lean/PHConditional.lean",
+      "source_sha256": "fd2e1e21c6e75deb5c3ee3b78dd9b6833bebe1646e5a7b5efc95662f62cd24e4"
+    },
+    {
+      "path": "lean/PHMain.lean",
+      "source_sha256": "078595f8c2c8a76061b927620ccad119dd72f8271d264efdbb8632ebb4767a06"
+    },
+    {
+      "path": "lean/ParityFiniteSource.lean",
+      "source_sha256": "632785159f4330cb6df334df0a8e1185b60eec656f01983d320848872571c919"
+    },
+    {
+      "path": "lean/ParityLogBounds.lean",
+      "source_sha256": "887a98304e213bdad715a679401ba5bd6766c33648cb45b959a9ce418088a613"
+    },
+    {
+      "path": "lean/ParityConcreteLogs.lean",
+      "source_sha256": "7962b1f29e0f1283cbb53997d8b641923901bf94048595af1ce3702343cabade"
+    },
+    {
+      "path": "lean/ParityScore.lean",
+      "source_sha256": "0145f1f05ff9f93d4492921a67f07f8bcacc5dadbe309647a00a2c88c6b62f07"
+    },
+    {
+      "path": "lean/ParitySourceEntropy.lean",
+      "source_sha256": "b6e543aa8704f2b2d2b471885c5b09f25cbef986e9b763fb863dc09a06a04d86"
+    },
+    {
+      "path": "lean/ParitySourceCoordinates.lean",
+      "source_sha256": "9f8cb07f6614de7b72bc3afc32a083dff57db36a56484bbf4a4dd7d4aa1263e4"
+    },
+    {
+      "path": "lean/AlmostEntropicClosure.lean",
+      "source_sha256": "d37e175c13118544ab07c3daf1300a25400567d8dd66a61f21994606f6212757"
+    },
+    {
+      "path": "lean/ParityCandidate.lean",
+      "source_sha256": "2b059bd848e278e40461323ca6edc92edf068761cd3960c5588fc01b67421273"
+    },
+    {
+      "path": "lean/ParityClosureConsequences.lean",
+      "source_sha256": "52f00d66ff6c42c76f9bae35cff66147559e09c8d81a450218adf2ab87902a86"
+    },
+    {
+      "path": "lean/ParityEndpoint.lean",
+      "source_sha256": "dd35e2a3680bd9b6ef3ce0e49c4d28e2893f00f831a83d3dd23199e47de48084"
+    },
+    {
+      "path": "lean/PHSourceBridge.lean",
+      "source_sha256": "7c04efb76c194e97629ea06bc2a442166275ae0c517ad49f59b760119dd715ae"
+    },
+    {
+      "path": "lean/ParityPaperCorrespondence.lean",
+      "source_sha256": "e9937f479da6ff20dc8d519caafe8583179b6df19f167d9b4cd685855e4f8d12"
+    },
+    {
+      "path": "lean/CertifiedMain.lean",
+      "source_sha256": "c0b6438f6ece5393c6af60628d304344fea8e56447b71a81f3fe645f33a65e7c"
+    },
+    {
+      "path": "lean/SixThresholdCriterion.lean",
+      "source_sha256": "2951fd165db715a2024a3563dcc777a115821d1d8d812e53e334f0a9d3342977"
+    },
+    {
+      "path": "lean/ParitySemanticBridge.lean",
+      "source_sha256": "f7d409a3dffdf55a86da054f2b486ff49f1749320e874bb05aff7ba2869f2e08"
+    },
+    {
+      "path": "lean/Verification.lean",
+      "source_sha256": "7ea4b34b8eb93bf64b0737598c9a165011ed66496d01db82ce4c6c3b21653648"
+    }
+  ],
+  "main_theorem": "ConditionalParityHashing.certified_main",
+  "declarations": [
+    {
+      "module": "CertifiedMain",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.certified_main"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_le_log_card"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_le_entropy"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_le_log_card"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_vec_le"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.hash_deficit_nonneg"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "def",
+      "name": "ParityHashing.selfInfo"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.expect_selfInfo"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "def",
+      "name": "ParityHashing.selfInfoVar"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "def",
+      "name": "ParityHashing.blockZ"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "def",
+      "name": "ParityHashing.blockS"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.one_sub_typicalMass_le"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.exists_le_of_sum_le_card"
+    },
+    {
+      "module": "PHAsymptotic",
+      "kind": "theorem",
+      "name": "ParityHashing.uniform_deficit_bound"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "abbrev",
+      "name": "ParityHashing.Vec"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "abbrev",
+      "name": "ParityHashing.Mat"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "def",
+      "name": "ParityHashing.dot"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "def",
+      "name": "ParityHashing.mulVec"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.zmod2_cases"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.zmod2_add_self"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.zmod2_ne_zero"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.zmod2_eq_iff"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.vec_add_self"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.vec_eq_iff_add_eq_zero"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.dot_add_left"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.dot_add_right"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.dot_single"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.mulVec_add"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.card_vec"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.card_mat"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.two_mul_card_dot_zero"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.card_mat_kernel"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.card_collide_mul_pow"
+    },
+    {
+      "module": "PHCollision",
+      "kind": "theorem",
+      "name": "ParityHashing.card_collide_le"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_eq_sum_ite"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "def",
+      "name": "ParityHashing.condMass"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.condMass_nonneg"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.condMass_sum"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_condMass"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_decomp"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "def",
+      "name": "ParityHashing.blockCode"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "def",
+      "name": "ParityHashing.condLaw4"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteEntropy_condLaw4"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "def",
+      "name": "ParityHashing.condTable"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.condTable_eq_sum"
+    },
+    {
+      "module": "PHConditional",
+      "kind": "theorem",
+      "name": "ParityHashing.condTable_mem_ae"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.finiteTables"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.aeTables"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_comp"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_comp"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.pushLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteEntropy_pushLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.pushLaw4_mem"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_indep"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_indep"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.prodLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteEntropy_prodLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteTables_add"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteTables_nsmul"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.hbBits"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.flagTable"
+    },
+    {
+      "module": "PHCone",
+      "kind": "def",
+      "name": "ParityHashing.flagLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_restrict_empty"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.finiteEntropy_flagLaw4"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.tendsto_hbBits_zero"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.zero_mem_finiteTables"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.smul_finite_mem_ae"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.ae_add"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.ae_smul"
+    },
+    {
+      "module": "PHCone",
+      "kind": "theorem",
+      "name": "ParityHashing.ae_sum"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_congr_left"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_congr_right"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_eq_zero_of_determined"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_mono_of_determined"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_pair"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.entropy_triple_chain"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_swap"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_const"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.vec_solve_last"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.vec_solve_mid"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.vec_solve_first"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.zmod2_xor_last"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.sideInfo"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.parity"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.key"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.auxW"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.blockSide"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.pairZ"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.pairSet"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.pairS"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "def",
+      "name": "ParityHashing.deficit"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.key_det"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.key_three"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.key_sum02"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.blockSide_mono"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.deficit_nonneg"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.deficit_subsum_le"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_pair_eq"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.entropy_W_le"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.entropy_W_ge"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.pair_case"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.single_case"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.det_case"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.empty_case"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.deficit_two_le"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.deficit_three_le"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.cond_error_bound"
+    },
+    {
+      "module": "PHConstruction",
+      "kind": "theorem",
+      "name": "ParityHashing.block_profile_bound"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "def",
+      "name": "ParityHashing.condEnt"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_explicit"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.jensen_log"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_at_eq_of_fibers"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_pair_le"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_atom"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_term_nonneg"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_ge_subset"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.condEnt_nonneg"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "def",
+      "name": "ParityHashing.typicalSet"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "def",
+      "name": "ParityHashing.typicalMass"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.typicalMass_nonneg"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.typicalMass_le_one"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.sum_hashed_cell_le"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.sum_condEnt_hash_ge"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.log_threshold_le"
+    },
+    {
+      "module": "PHFiniteHash",
+      "kind": "theorem",
+      "name": "ParityHashing.avg_deficit_le"
+    },
+    {
+      "module": "PHIid",
+      "kind": "def",
+      "name": "ParityHashing.prodMass"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.prodMass_nonneg"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.sum_prod_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.expect_prod_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.prodMass_sum"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.expect_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.expect_two_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.expect_sq_sum_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.chebyshev_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.cellMass_prod_coord"
+    },
+    {
+      "module": "PHIid",
+      "kind": "theorem",
+      "name": "ParityHashing.mapEntropyNats_prod_coord"
+    },
+    {
+      "module": "PHMain",
+      "kind": "def",
+      "name": "ParityHashing.u34"
+    },
+    {
+      "module": "PHMain",
+      "kind": "def",
+      "name": "ParityHashing.sourceTable"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.sourceTable_eq_finiteEntropy"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.sourceTable_mem_ae"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.floor_div_close"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.parity_hashing_strict"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.parity_hashing_mem_ae"
+    },
+    {
+      "module": "PHMain",
+      "kind": "def",
+      "name": "ParityHashing.ingletonJ"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.continuous_ingletonJ"
+    },
+    {
+      "module": "PHMain",
+      "kind": "theorem",
+      "name": "ParityHashing.finite_witness_of_ae"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "abbrev",
+      "name": "ConditionalParityHashing.srcP"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "abbrev",
+      "name": "ConditionalParityHashing.srcX"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "abbrev",
+      "name": "ConditionalParityHashing.srcPi"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.srcP_nonneg"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.srcP_sum"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log2_pos'"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_xor"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.zcast_inj"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sideInfo_eq_iff"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.side_entropy"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.atoms_injective"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.full_entropy"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.entropy_of_injective"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.inj0"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.inj1"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.inj4"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.inj5"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.joint_AD_V"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.joint_BC_U"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.cellMass_partner"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.partner_entropy"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.crit_log"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.side_pair_entropy_AB"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.numeric_facts"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr0"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr1"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr4"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr5"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr2"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr3"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.thr_partner"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_thresholds"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_sourceTable"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_u34"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_shifted"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.aeTables_eq_almost"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.src_strict_rates"
+    },
+    {
+      "module": "PHSourceBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.full_parity_hashing_result"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceProfile"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.parityRank"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.criticalRate"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.shiftedProfile"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.candidate"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.paperJ"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.paperJ_rank"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.paperJ_shift"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.univ_four"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.criticalRate_formula"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.paperJ_source_formula"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_total_formula"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_total_pos"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_score_formula"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_score_interval"
+    },
+    {
+      "module": "ParityCandidate",
+      "kind": "def",
+      "name": "ConditionalParityHashing.FullParityHashingResult"
+    },
+    {
+      "module": "ParityClosureConsequences",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.continuous_paperJ"
+    },
+    {
+      "module": "ParityClosureConsequences",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.finite_score_of_candidate_mem"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_P_enclosure"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_Q_enclosure"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_T_enclosure"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_one_sub_P_enclosure"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_one_sub_Q_enclosure"
+    },
+    {
+      "module": "ParityConcreteLogs",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_one_sub_T_enclosure"
+    },
+    {
+      "module": "ParityEndpoint",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.criticalRate_pos"
+    },
+    {
+      "module": "ParityEndpoint",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.criticalRate_lt_one"
+    },
+    {
+      "module": "ParityEndpoint",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.shiftedProfile_continuous"
+    },
+    {
+      "module": "ParityEndpoint",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_mem_of_strict_rates"
+    },
+    {
+      "module": "ParityEndpoint",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.full_result_of_strict_rates"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceAtoms"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceWeights"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceWeights_nonneg"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceWeights_sum"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceLaw"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "def",
+      "name": "ConditionalParityHashing.chi"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_parity"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceCell"
+    },
+    {
+      "module": "ParityFiniteSource",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_partner_uniform"
+    },
+    {
+      "module": "ParityLogBounds",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_enclosure"
+    },
+    {
+      "module": "ParityLogBounds",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_two_enclosure"
+    },
+    {
+      "module": "ParityPaperCorrespondence",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.criticalRate_is_CMI"
+    },
+    {
+      "module": "ParityPaperCorrespondence",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.parityRank_is_U34"
+    },
+    {
+      "module": "ParityPaperCorrespondence",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.candidate_eight_decimal_rounding"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.P"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.Q"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.T"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.binaryNats"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.sourceHNats"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.scoreNumeratorNats"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.scoreDenominatorNats"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "def",
+      "name": "ConditionalParityHashing.scoreFormula"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.score_denominator_pos"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.score_interval"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.score_below_threshold"
+    },
+    {
+      "module": "ParityScore",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.score_nats_bits"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_quarter"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_eighth"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_P_2"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_P_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_Q_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_T_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_one_sub_P_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_one_sub_Q_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.log_mass_one_sub_T_3"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_empty"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_A"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_B"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_AB"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_C"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_AC"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_BC"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_ABC"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_D"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_AD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_BD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_ABD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_CD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_ACD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_BCD"
+    },
+    {
+      "module": "ParitySourceCoordinates",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_ABCD"
+    },
+    {
+      "module": "ParitySourceEntropy",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceLaw_cell"
+    },
+    {
+      "module": "ParitySourceEntropy",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceLaw_mapEntropy"
+    },
+    {
+      "module": "ParitySourceEntropy",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.source_entropy_atoms"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.sideInfo_single_label"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.sideInfo_coarsen"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.partner_C_given_AC"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.partner_D_given_BD"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.six_thresholds_imply_ten"
+    },
+    {
+      "module": "SixThresholdCriterion",
+      "kind": "theorem",
+      "name": "ParityHashing.parity_hashing_six_conditions"
+    },
+    {
+      "module": "ParitySemanticBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.almostEntropic_iff_finite_coordinate_approx"
+    },
+    {
+      "module": "ParitySemanticBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceLaw_mass_on_atoms"
+    },
+    {
+      "module": "ParitySemanticBridge",
+      "kind": "theorem",
+      "name": "ConditionalParityHashing.sourceLaw_zero_off_atoms"
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "kind": "definition or theorem",
+      "name": "SharpStability.finiteEntropyProfiles"
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "kind": "definition or theorem",
+      "name": "SharpStability.almostEntropicProfiles"
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "kind": "definition or theorem",
+      "name": "SharpStability.finite_profile_mem"
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "kind": "definition or theorem",
+      "name": "SharpStability.finite_profiles_subset_almost"
+    },
+    {
+      "module": "AlmostEntropicClosure",
+      "kind": "definition or theorem",
+      "name": "SharpStability.finite_profile_almost"
+    }
+  ]
+}

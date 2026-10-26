@@ -1,0 +1,16 @@
+theorem ParityHashing.parity_hashing_six_conditions.{u_1} : ∀ {Ω : Type u_1} {m : ℕ} [inst : Fintype Ω] {p : Ω → ℝ},
+  (∀ (a : Ω), 0 ≤ p a) →
+    ∑ a, p a = 1 →
+      ∀ (X : Fin 4 → Ω → Fin m) (π : Fin 4 → Fin m → ZMod 2),
+        (∀ (a : Ω), parity X π 0 a + parity X π 1 a + parity X π 2 a + parity X π 3 a = 0) →
+          ∀ {c : ℝ},
+            (∀ (j : Fin 10), ↑j < 6 → c * Real.log 2 ≤ condEnt p (pairZ X π j) (pairS X j)) →
+              ∀ {R : ℝ}, 0 ≤ R → R ≤ c → sourceTable p X - R • u34 ∈ aeTables :=
+fun {Ω} {m} [Fintype Ω] {p} hp hp1 X π hx {c} hc {R} hR hRc =>
+  parity_hashing_mem_ae hp hp1 X π hx (six_thresholds_imply_ten hp X π hx hc) hR hRc
+'ParityHashing.sideInfo_single_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityHashing.sideInfo_coarsen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityHashing.partner_C_given_AC' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityHashing.partner_D_given_BD' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityHashing.six_thresholds_imply_ten' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityHashing.parity_hashing_six_conditions' depends on axioms: [propext, Classical.choice, Quot.sound]

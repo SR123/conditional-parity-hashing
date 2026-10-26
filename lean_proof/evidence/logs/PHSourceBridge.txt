@@ -1,0 +1,4 @@
+'ConditionalParityHashing.src_xor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.src_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.src_strict_rates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.full_parity_hashing_result' depends on axioms: [propext, Classical.choice, Quot.sound]

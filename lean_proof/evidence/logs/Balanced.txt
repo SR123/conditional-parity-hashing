@@ -1,0 +1,6 @@
+'SharpStability.finiteU_as_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpStability.finiteR_as_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpStability.finiteJ_as_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpStability.balancedU' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpStability.balancedR' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SharpStability.balancedJ' depends on axioms: [propext, Classical.choice, Quot.sound]

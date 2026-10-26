@@ -1,0 +1,5 @@
+'ConditionalParityHashing.sourceWeights_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.sourceWeights_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.sourceLaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.source_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.source_partner_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]

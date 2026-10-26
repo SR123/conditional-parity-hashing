@@ -1,0 +1,4 @@
+'ConditionalParityHashing.score_denominator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.score_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.score_below_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ConditionalParityHashing.score_nats_bits' depends on axioms: [propext, Classical.choice, Quot.sound]

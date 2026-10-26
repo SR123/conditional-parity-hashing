@@ -1,0 +1,566 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,microtype}
+\usepackage[margin=.9in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={An almost-entropic Ingleton score below -0.09738},
+pdfauthor={Soren Riis (creator and coordinator)},
+pdfsubject={Preprint and Lean proof; DOI 10.5281/zenodo.23662511},
+pdfkeywords={entropy region, Ingleton inequality, almost-entropic cone, privacy amplification, Lean}}
+\usepackage{enumitem,tikz}
+\setlist{nosep}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\AEcone}{\overline{\Gamma_4^{*}}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Ing}{\operatorname{J}}
+\newcommand{\hb}{h_2}
+\DeclareMathOperator{\supp}{supp}
+\title{An almost-entropic Ingleton score below $-0.09738$\\[3pt]
+\large Conditional hashing of a binary parity structure}
+\author{S\o ren Riis\thanks{Creator and coordinator. Research direction, contributions and AI assistance are described at the end of the paper.}}
+\date{}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\begin{document}
+\setlength{\abovedisplayskip}{8pt}
+\setlength{\belowdisplayskip}{8pt}
+\maketitle
+\vspace{-1em}
+\begin{abstract}
+We prove an improved lower bound of $0.097387436922$ on the largest
+normalised Ingleton violation among four-variable almost-entropic vectors.
+Previously reported constructions reach approximately $0.0925$, used here
+as a rounded benchmark; the best published universal upper bound is
+$19/124\approx0.15322581$. The main novelty is a construction combining
+local parity labels, one common binary linear hash, simultaneous conditional
+privacy amplification and joint conditioning. Applied to a 24-atom source
+of Mat\'u\v{s} and Csirmaz, it produces an auxiliary determined by any three
+observations, with one hashed degree of freedom retaining asymptotically
+full conditional entropy given any pair's complete records. Conditioning
+subtracts a multiple of the uniform-matroid rank function $U_{3,4}$ from
+all fifteen entropy coordinates. The Ingleton expression is preserved
+while the joint entropy decreases, improving the normalised violation.
+We give a general six-test criterion for this subtraction. The main
+theorem has been formalised and kernel-checked in Lean, including the
+closed rate interval, the score enclosure and the existence of finite-alphabet
+distributions with signed score below $-0.09738$.
+\end{abstract}
+\noindent\textit{Index terms---}Entropy region, Ingleton inequality, privacy amplification, formal verification.
+
+\section{Introduction}
+Four finite random variables determine fifteen joint entropies,
+$h(S)=H(X_S)$ for the nonempty subsets of $N=\{A,B,C,D\}$.
+Which such vectors arise from distributions, or can be approached
+arbitrarily closely? This is the four-variable entropy-region problem,
+with applications to network coding, secret sharing and information
+inequalities~\cite{DFZ,MC}. We put $h(\varnothing)=0$, measure entropy
+in bits, and write $AB=(X_A,X_B)$ for joint observations.
+
+The closure of the finite-alphabet entropy region $\Gamma_4^*$ is the
+\emph{almost-entropic cone} $\AEcone$. It is a closed convex cone~\cite{ZY}
+between two explicit cones:
+\[
+ \mathcal L_4\subsetneq\AEcone\subsetneq\Gamma_4.
+\]
+Here the Shannon cone $\Gamma_4$ consists of monotone submodular set
+functions vanishing at the empty set. The linear cone $\mathcal L_4$
+is generated, with closure, by entropy vectors of linear observations
+of uniform finite-field randomness. In four variables it is exactly the
+part of $\Gamma_4$ satisfying the six Ingleton inequalities~\cite{MS95,HRSV00}.
+For at most three variables, Shannon's inequalities describe the whole
+closure~\cite{ZY}. For four, Zhang and Yeung showed that further
+inequalities are necessary~\cite{ZY98}, and Mat\'u\v{s} proved that no
+finite collection of linear inequalities suffices~\cite{MatusInfinite}.
+The geometry of the intervening almost-entropic boundary remains unknown.
+The distinction between entropic and almost-entropic points also affects
+conditional information inequalities~\cite{KR}.
+
+\subsection{The Ingleton gap}
+We use the following instance of Ingleton's inequality~\cite{Ingleton71}:
+\begin{equation}\label{eq:J}
+ \Ing(h)=I(C;D\mid A)+I(C;D\mid B)+I(A;B)-I(C;D)\ge0.
+\end{equation}
+There are six distinct instances, one for each choice of the pair in
+the final mutual-information term. Linear observations satisfy all six;
+general distributions may violate them.
+For $h(N)>0$, following~\cite[Definition~3]{DFZ}, write the signed score as
+$\sigma(h)=\Ing(h)/h(N)$ and the normalised violation as
+$\nu(h)=-\sigma(h)$, and set
+\begin{equation}\label{eq:extremum}
+ \nu^*=\sup_{f\in\AEcone,\ f(N)>0}\nu(f).
+\end{equation}
+On the normalised slice $f(N)=1$, $\nu=-\Ing$ is a linear height beyond
+the chosen Ingleton hyperplane, in the units fixed by~\eqref{eq:J}.
+It is invariant under positive scaling; a Euclidean distance would also
+require a choice of norm. The same supremum holds over finite entropic
+vectors, by density and continuity where $f(N)>0$.
+A construction gives a lower bound on $\nu^*$; a universal inequality
+gives an upper bound. The Shannon cone permits $1/4$~\cite{DFZ}, while
+Chang's recent preprint proves the upper bound $19/124$ for the
+almost-entropic cone~\cite{Chang}.
+
+\subsection{Earlier constructions and the new bound}
+The four-atom conjecture of Dougherty, Freiling and Zeger proposed an
+optimum of approximately $0.089373$~\cite{DFZ}. Mat\'u\v{s} and Csirmaz
+refuted it using a 40-atom source, tightening and almost-entropy-preserving
+maps~\cite[Example~2, Theorem~4]{MC}. Boston and Nan subsequently
+optimised the associated transformed violation~\cite{BN}.
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Construction & Method/status & Positive violation $\nu$\\
+\midrule
+Four-atom source~\cite{DFZ} & numerical ordinary score & $\approx0.089373$\\
+Mat\'u\v{s}--Csirmaz~\cite{MC} & transformed limiting score & $\approx0.09243$\\
+Boston--Nan~\cite{BN} & optimised transformed score & $\approx0.0925000777$\\
+This paper & rigorous almost-entropic limit & $[0.097387436922,\,0.097387436923]$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In our orientation the transformed violation is
+\[
+ \widetilde\nu(h)=\frac{-\Ing(h)}{h(ACD)+h(BCD)+h(AB)-2h(N)}.
+\]
+For a tight source, meaning that every triple has entropy $h(N)$, its
+denominator is $h(AB)$. Mat\'u\v{s}--Csirmaz's theorem shows that such
+transformed violations are limits of ordinary violations~\cite[Theorem~2.6]{BN}.
+The 2024 numerical value $0.0925001031$ is reported with the tiny change
+attributed to numerical stability~\cite[Section~5.2, Table~2]{CNN}.
+To the best of our knowledge, the strongest previously reported
+constructions reach approximately $0.0925$, which we use as a rounded
+benchmark. Our construction and the best published universal bound leave
+\begin{equation}\label{eq:gap}
+ 0.097387436922\le\nu^*\le\frac{19}{124}
+ =0.15322580645161\ldots\ .
+\end{equation}
+
+\subsection{The result and its organising idea}
+Our source is the $s=t=0$ specialisation of Mat\'u\v{s}--Csirmaz's
+Example~2. Choose one of the three columns in Table~\ref{tab:source}
+with probabilities
+$(P,Q,T)=(0.74830195,0.22122546,0.03047259)$, then choose a row uniformly
+and read its four symbols as the observations. Let $h$ be its entropy
+vector, let $\mathcal H=H(P,Q,T)$ be the entropy of the column choice,
+and write $\hb$ for binary entropy. Put
+$u(S)=\min\{3,|S|\}$, the rank function of the uniform matroid $U_{3,4}$,
+and $b=I(C;D\mid AB)$.
+
+\begin{samepage}
+\begin{theorem}\label{thm:main}
+For every $0\le R\le b$, $h-Ru\in\AEcone$.
+For $z=h-bu$, $z(N)>0$ and its exact signed score is
+\[
+ \frac{\Ing(z)}{z(N)}=
+ \frac{2-2P+2\hb(P)+\hb(T)-2\mathcal H-\hb(Q)}
+      {3-2\mathcal H+3\hb(Q)}.
+\]
+It satisfies
+\begin{equation}\label{eq:scorebox}
+ -0.097387436923\ \le\ \frac{\Ing(z)}{z(N)}\ \le\ -0.097387436922.
+\end{equation}
+Consequently $\nu^*\ge0.097387436922$, and some four finite-alphabet
+random variables have signed Ingleton score below $-0.09738$.
+\end{theorem}
+\end{samepage}
+
+The idea is to construct an auxiliary with a prescribed information
+profile. Conditioning on a finite auxiliary $W$ changes $h(S)$ to
+\[
+ H(X_S\mid W)=h(S)-I(X_S;W).
+\]
+Thus, on $n$ independent source copies, subtracting $Ru$ calls for
+$I(X_S^n;W)/n\to R\min\{3,|S|\}$. We seek a three-key auxiliary
+that any three observations determine, while two observations leave
+one key's worth of entropy and one observation leaves two.
+
+Each observer computes a local bit $Y_i$ and the four bits sum to zero.
+One common binary linear map hashes their length-$n$ sequences to
+$k$-bit keys, preserving this parity exactly. A pair already knows its
+two keys. It is missing one further hashed binary form that completes
+them to three independent coefficient rows. The six privacy requirements
+correspond to the pairs $AB,AC,AD,BC,BD,CD$: for each pair, the missing
+hashed form must retain $k-O(1)$ bits of conditional entropy even after
+both observers' \emph{complete records} are revealed. A single matrix
+must meet all six requirements. These requirements allow dependent,
+nonuniform labels and imply the four singleton requirements used in the
+proof. The resulting information accounting is
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Observed subset size & $1$ & $2$ & $3$ or $4$\\
+\midrule
+$H(W\mid X_S^n)$ & $2k+O(1)$ & $k+O(1)$ & $0$\\
+$I(X_S^n;W)$ & $k+O(1)$ & $2k+O(1)$ & $3k+O(1)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The constants are independent of $n$. Since $\Ing(u)=0$ and $u(N)=3$,
+the subtraction preserves the Ingleton numerator and lowers the joint
+entropy by $3R$.
+
+Tightening and convolution already provide important ways of modifying
+entropy vectors~\cite{Matus,MC}, and privacy amplification supplies the
+hashing tool~\cite{BBCM,Csiszar96,RW}. To our knowledge, the new ingredient
+here is their coordinated use to realise the non-modular subtraction
+$Ru$ from a source with local parity labels. For the same source, the
+ordinary, Mat\'u\v{s}--Csirmaz-transformed and new violations are
+approximately $0.08365$, $0.08778$ and $0.09739$, respectively.
+The main theorem is kernel-checked in Lean; its exact formal scope is
+stated in Section~\ref{sec:verification}.
+
+Section~\ref{sec:general} proves the general six-test criterion.
+Section~\ref{sec:source} verifies its hypotheses for the source;
+Section~\ref{sec:score} computes the score and the geometry of the
+subtraction path; Section~\ref{sec:recipe} gives finite conditional laws
+and a sampling recipe. The hashing proof and the numerical enclosure
+are supplied in the appendices.
+
+\input{general_criterion}
+
+\section{The source and its parity structure}\label{sec:source}
+To generate one source sample, first choose a column with probabilities
+$(P,Q,T)$, then choose one of its eight rows uniformly. Read the four
+symbols as the observations of $A,B,C,D$. Thus the finite source is
+completely specified by three weights and the table.
+
+Here $P,Q,T>0$ sum to one. Each column of Table~\ref{tab:source} lists
+eight atoms in $\{0,1,2,3\}^4$, each of probability $P/8$, $Q/8$ or $T/8$.
+All other probabilities vanish. This is exactly the
+$s=t=0$ specialisation of the published family~\cite[Example~2]{MC}, with
+$(p,q,r)=(P,Q,T)/8$; their $\xi_i,\xi_j,\xi_k,\xi_l$ are our $A,B,C,D$,
+and their score $\mathbb I_{ij}$ is our $\Ing(h)/h(N)$. We use
+\begin{equation}\label{eq:parameters}
+ (P,Q,T)=\frac1{100000000}(74830195,22122546,3047259).
+\end{equation}
+\begin{table}[ht]
+\centering
+\begin{tabular}{ccc}
+\toprule
+probability $P/8$ & probability $Q/8$ & probability $T/8$\\
+\midrule
+$0000$&$0210$&$0011$\\
+$0101$&$0321$&$0120$\\
+$1010$&$1100$&$1002$\\
+$1212$&$1332$&$1230$\\
+$2121$&$2001$&$2103$\\
+$2323$&$2233$&$2331$\\
+$3232$&$3012$&$3213$\\
+$3333$&$3123$&$3322$\\
+\bottomrule
+\end{tabular}
+\caption{The 24-atom source, in the coordinate order $A,B,C,D$. Each of the
+eight atoms in a column has its column's displayed probability.}
+\label{tab:source}
+\end{table}
+
+Write
+\[
+ \mathcal H=-P\log P-Q\log Q-T\log T,\qquad
+ \hb(x)=-x\log x-(1-x)\log(1-x).
+\]
+Every singleton is uniform on four symbols, and every triple distinguishes
+all 24 atoms. Counting the masses in each marginal gives all fifteen coordinates:
+\begin{equation}\label{eq:sourceentropy}
+\begin{array}{c|c}
+ S & h(S)\\\hline
+ A,B,C,D&2\\
+ AB&3+\hb(Q)\\
+ AC,BD&3-P+\hb(P)\\
+ AD,BC&3\\
+ CD&3+\hb(T)\\
+ |S|\ge3&3+\mathcal H.
+\end{array}
+\end{equation}
+Table~\ref{tab:masses} makes these counts and the later completion
+entropies directly checkable.
+
+In particular the source is tight, i.e.\ $h(N\setminus\{i\})=h(N)$ for every $i$, and
+\begin{equation}\label{eq:b}
+ b=\mathcal H-\hb(Q)=(P+T)\hb\!\left(\frac{T}{P+T}\right)>0.
+\end{equation}
+Tightness gives $I(C;D\mid AB)=h(N)-h(AB)=b$.
+The expression for $b$ has a direct interpretation in the table:
+$AB$ identifies the $Q$-column cases, while the $P$ and $T$ columns
+have the same eight $AB$ values. In those ambiguous cases, of total
+probability $P+T$, the unresolved column choice has probabilities
+$P/(P+T)$ and $T/(P+T)$. The bit $E=\chi(A)+\chi(C)$ defined below resolves this choice, so
+$H(E\mid AB)=H(CD\mid AB)=b$. This is the randomness that limits the
+subtraction rate.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Subset & Marginal masses & Masses after adding the missing form\\
+\midrule
+$A,B,C,D$ & $4\times\tfrac14$ & ---\\
+$AB$ & $8\times\tfrac Q8$, $8\times\tfrac{P+T}8$ & the 24 source masses\\
+$AC,BD$ & $4\times\tfrac P4$, $8\times\tfrac{Q+T}8$ & the 24 source masses\\
+$AD,BC$ & $8\times\tfrac18$ & $8\times\tfrac P8$, $8\times\tfrac{Q+T}8$\\
+$CD$ & $8\times\tfrac T8$, $8\times\tfrac{P+Q}8$ & the 24 source masses\\
+$|S|\ge3$ & the 24 source masses & ---\\
+\bottomrule
+\end{tabular}
+\caption{Mass multiplicities; $r\times m$ denotes $r$ masses of size $m$.
+``The 24 source masses'' means that the observation distinguishes all atoms.
+The missing forms are those in~\eqref{eq:thresholds}. Every displayed list sums to one.}
+\label{tab:masses}
+\end{table}
+
+\begin{samepage}
+The structure needed for hashing appears after a simple local relabelling.
+Define $\chi(0)=\chi(3)=0$, $\chi(1)=\chi(2)=1$ and put
+\[
+ U=\chi(A),\quad V=\chi(B),\quad E=\chi(A)+\chi(C),
+\]
+where bit addition is in $\F$. Directly on every atom,
+\begin{equation}\label{eq:forms}
+ (\chi(A),\chi(B),\chi(C),\chi(D))=(U,V,U+E,V+E).
+\end{equation}
+\end{samepage}
+These are precisely the forms in~\eqref{eq:generalforms}, so the
+parity hypothesis of Theorem~\ref{thm:general} holds. Their algebraic
+ranks do not imply probabilistic independence: for example,
+$H(\chi(A),\chi(C))=1+\hb(P)<2$.
+The additional $s$- and $t$-columns in the original family have odd
+label parity under this $\chi$, which is why we set $s=t=0$.
+The rational weights were selected by numerical exploration of the
+new score; their optimality is not used.
+
+Each pair of observed variables reveals two of the three underlying binary
+forms. The remaining uncertainty sets the rate at which a third form can
+be hashed privately from that pair. For each pair choose a missing form $L_{ij}$ completing its two observed
+rows to a basis. Its conditional entropy is as follows:
+\begin{equation}\label{eq:thresholds}
+\begin{array}{c|c|c}
+ ij&L_{ij}&H(L_{ij}\mid X_iX_j)\\\hline
+ AB&E&\mathcal H-\hb(Q)=b\\
+ AC&V&\mathcal H+P-\hb(P)\\
+ AD&V&\hb(P)\\
+ BC&U&\hb(P)\\
+ BD&U&\mathcal H+P-\hb(P)\\
+ CD&U&\mathcal H-\hb(T).
+\end{array}
+\end{equation}
+Here $(AB,E),(AC,V),(BD,U),(CD,U)$ each distinguish all 24 atoms, giving
+four entries by subtraction in~\eqref{eq:sourceentropy}. The completed
+$AD$ and $BC$ marginals have eight masses $P/8$ and eight masses $(Q+T)/8$,
+so their joint entropy is $3+\hb(P)$, giving the other two entries.
+
+Every entry of~\eqref{eq:thresholds} is at least $b$, with no numerical
+comparison required; we use only $0<T<Q<1/2$. For $CD$ the entry minus $b$
+is $\hb(Q)-\hb(T)\ge0$. For $AC$ and $BD$ it is $P+\hb(Q)-\hb(P)$, and
+$\hb(Q)\ge2Q$ by concavity on $[0,1/2]$ while $\hb(P)\le1$, whence
+\[
+ P+\hb(Q)-\hb(P)\ge P+2Q-1=Q-T>0.
+\]
+For $AD$ and $BC$: on the $P$-column atoms $A=C$, while $\chi(A)\ne\chi(C)$
+on the other sixteen atoms. So $E=0$ exactly on the $P$-column,
+$\Pr(E=0)=P$, and $b=H(E\mid AB)\le H(E)=\hb(P)$. Hence every entry
+is at least $b$, and the $AB$ entry equals $b$.
+Theorem~\ref{thm:general} therefore gives $h-Ru\in\AEcone$ for
+$0\le R\le b$, proving the first assertion of Theorem~\ref{thm:main}.
+
+
+\section{The achieved score}\label{sec:score}
+The source coordinates give
+\begin{gather*}
+ I(C;D\mid A)=I(C;D\mid B)=1-P+\hb(P)-\mathcal H,\\
+ I(A;B)=1-\hb(Q),\qquad I(C;D)=1-\hb(T).
+\end{gather*}
+The violation comes from a large $I(C;D)$ relative to the two conditional
+mutual informations and $I(A;B)$. Since $\Ing(u)=0$, we obtain
+\begin{align}
+ \Ing(z)=\Ing(h)
+ &=2-2P+2\hb(P)+\hb(T)-2\mathcal H-\hb(Q),\label{eq:Jformula}\\
+ z(N)&=3+\mathcal H-3b=3-2\mathcal H+3\hb(Q).\label{eq:den}
+\end{align}
+For a tight source the Mat\'u\v{s}--Csirmaz transformation preserves
+$\Ing(h)$ and reduces the joint entropy from $h(N)$ to $h(AB)=h(N)-b$
+\cite[Theorem~4 and Section~8]{MC}. The parity construction reduces it
+to $h(N)-3b$. At these fixed weights the signed scores are
+\[
+ \sigma(h)=-0.08365470562\ldots,\qquad
+ \frac{\Ing(h)}{h(AB)}=-0.08778073130\ldots,\qquad
+ \sigma(z)=-0.09738743692\ldots .
+\]
+Thus this comparison isolates the gain from the new transformation.
+
+All target coordinates are specified exactly by
+$z(S)=h(S)-b\min\{3,|S|\}$; Table~\ref{tab:target} lists their numerical
+values, grouping only coordinates with equal values.
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Subset(s) $S$ & $z(S)$ (bits) & loss $h(S)-z(S)$\\
+\midrule
+$A,B,C,D$ & $1.814430591039$ & $b$\\
+$AB$ & $3.391260034510$ & $2b$\\
+$AC,BD$ & $2.694517625911$ & $2b$\\
+$AD,BC$ & $2.628861182078$ & $2b$\\
+$CD$ & $2.825617546930$ & $2b$\\
+$ABC,ABD,ACD,BCD,ABCD$ & $3.391260034510$ & $3b$\\
+\bottomrule
+\end{tabular}
+\caption{All fifteen coordinates of the limiting almost-entropic point.}
+\label{tab:target}
+\end{table}
+In particular,
+\[
+ b=0.18556940896122\ldots,\quad
+ \Ing(z)=-0.33026612269970\ldots,\quad
+ z(N)=3.39126003450969\ldots>0.
+\]
+Appendix~\ref{app:numerical} gives a rational logarithm-series calculation
+that certifies~\eqref{eq:scorebox}. The independent exact checker also
+accumulates all fifteen marginals directly from the source atoms.
+The enclosure evaluates the exact expressions above; it is separate
+from the almost-entropic membership argument.
+
+\begin{figure}[ht]
+\centering
+\input{path_plot}
+\caption{The achieved violation on the fixed path $h-Ru$, $0\le R\le b$.
+The endpoint is the Shannon limit for this direction, proved achievable
+in the almost-entropic cone. The vertical axis begins at $0.082$. The horizontal line is the rounded
+previous benchmark. This is a plot of the construction, not a section of the unknown cone.}
+\label{fig:path}
+\end{figure}
+
+\paragraph{Geometry along this path.}
+The function $u$ contributes
+$u(ABC)+u(ABD)-u(AB)-u(N)=1$ to $I(C;D\mid AB)$, so
+\[
+ I_{h-Ru}(C;D\mid AB)=b-R.
+\]
+The privacy bottleneck is therefore also the Shannon obstruction on this
+path: every $R>b$ violates submodularity, while Theorem~\ref{thm:main}
+realises every $0\le R\le b$. The nonnegative feasible rates on this
+path are exactly $[0,b]$, both for $\AEcone$ and for $\Gamma_4$.
+At the endpoint, $z(AB)=z(N)$ and every triple also has entropy $z(N)$,
+placing $z/z(N)$ on these Shannon boundary hyperplanes.
+Since $\Ing(h-Ru)=\Ing(h)<0$, its violation
+$-\Ing(h)/(h(N)-3R)$ increases along the segment and is largest at $R=b$.
+This proves optimality along this fixed source and direction.
+
+Finally, since $z\in\AEcone$, finite entropic vectors approach $z$.
+The score is continuous at $z$ because $z(N)>0$. Its upper bound in
+\eqref{eq:scorebox} is strictly below $-0.09738$, proving the final
+assertion of Theorem~\ref{thm:main}.
+Exact finite realisability of $z$ remains open.
+The next section gives an exact sampling procedure for
+a suitable finite law, selected using the strict score margin.
+
+\input{finite_recipe}
+
+\input{formal_scope}
+
+\appendix
+\input{hashing_proof}
+\input{numerical_certificate}
+\input{contributions}
+
+\begin{thebibliography}{99}\footnotesize\raggedright\setlength{\itemsep}{0pt}
+\bibitem{DFZ}
+R. Dougherty, C. Freiling and K. Zeger,
+``Non-Shannon information inequalities in four random variables,''
+arXiv:1104.3602, 2011.
+\href{https://arxiv.org/abs/1104.3602}{arXiv:1104.3602}.
+
+\bibitem{MC}
+F. Mat\'u\v{s} and L. Csirmaz, ``Entropy region and convolution,''
+\emph{IEEE Trans. Inf. Theory}, vol.~62, no.~11, pp.~6007--6018, 2016.
+\href{https://doi.org/10.1109/TIT.2016.2601598}{doi:10.1109/TIT.2016.2601598};
+\href{https://arxiv.org/abs/1310.5957v1}{arXiv:1310.5957v1} (2013).
+
+\bibitem{ZY}
+Z. Zhang and R. W. Yeung,
+``A non-Shannon-type conditional inequality of information quantities,''
+\emph{IEEE Trans. Inf. Theory}, vol.~43, no.~6, pp.~1982--1986, 1997.
+\href{https://doi.org/10.1109/18.641561}{doi:10.1109/18.641561}.
+
+\bibitem{MS95}
+F. Mat\'u\v{s} and M. Studen\'y, ``Conditional independences among four random
+variables I,'' \emph{Combin. Probab. Comput.}, vol. 4,
+no. 3, pp. 269--278, 1995.
+\href{https://doi.org/10.1017/S0963548300001644}{doi:10.1017/S0963548300001644}.
+
+\bibitem{HRSV00}
+D. Hammer, A. Romashchenko, A. Shen and N. Vereshchagin,
+``Inequalities for Shannon entropy and Kolmogorov complexity,''
+\emph{J. Comput. Syst. Sci.}, vol. 60, no. 2,
+pp. 442--464, 2000.
+\href{https://doi.org/10.1006/jcss.1999.1677}{doi:10.1006/jcss.1999.1677}.
+
+\bibitem{ZY98}
+Z. Zhang and R. W. Yeung,
+``On characterization of entropy function via information inequalities,''
+\emph{IEEE Trans. Inf. Theory}, vol.~44, no.~4, pp.~1440--1452, 1998.
+\href{https://doi.org/10.1109/18.681320}{doi:10.1109/18.681320}.
+
+\bibitem{MatusInfinite}
+F. Mat\'u\v{s}, ``Infinitely many information inequalities,''
+in \emph{Proc. IEEE Int. Symp. Inf. Theory}, 2007, pp.~41--44.
+\href{https://doi.org/10.1109/ISIT.2007.4557201}{doi:10.1109/ISIT.2007.4557201}.
+
+\bibitem{KR}
+T. Kaced and A. Romashchenko,
+``Conditional information inequalities for entropic and almost entropic points,''
+\emph{IEEE Trans. Inf. Theory}, vol.~59, no.~11, pp.~7149--7167, 2013.
+\href{https://doi.org/10.1109/TIT.2013.2274614}{doi:10.1109/TIT.2013.2274614};
+\href{https://arxiv.org/abs/1207.5742}{arXiv:1207.5742}.
+
+\bibitem{Ingleton71}
+A. W. Ingleton, ``Representation of matroids,'' in
+\emph{Combinatorial Mathematics and its Applications}, D. J. A. Welsh, Ed.
+London, UK: Academic Press, 1971, pp. 149--167.
+
+\bibitem{Chang}
+J. Chang, ``Improved bounds on the Ingleton score of four random variables,''
+arXiv:2610.05168, Oct.~4, 2026.
+\href{https://arxiv.org/abs/2610.05168}{arXiv:2610.05168}.
+
+\bibitem{BN}
+N. Boston and T.-T. Nan,
+``Violations of the Ingleton inequality and revising the four-atom conjecture,''
+\emph{Kybernetika}, vol.~56, no.~5, pp.~916--933, 2020.
+\href{https://doi.org/10.14736/kyb-2020-5-0916}{doi:10.14736/kyb-2020-5-0916}.
+
+\bibitem{CNN}
+S. Zhang, N. Liu, W. Kang and H. Permuter,
+``Optimizing distributions for associated entropic vectors via generative convolutional neural networks,''
+\emph{Entropy}, vol.~26, no.~8, Art. no.~711, 2024.
+\href{https://doi.org/10.3390/e26080711}{doi:10.3390/e26080711}.
+
+\bibitem{Matus}
+F. Mat\'u\v{s}, ``Two constructions on limits of entropy functions,''
+\emph{IEEE Trans. Inf. Theory}, vol.~53, no.~1, pp.~320--330, 2007.
+\href{https://doi.org/10.1109/TIT.2006.887090}{doi:10.1109/TIT.2006.887090}.
+
+\bibitem{BBCM}
+C. H. Bennett, G. Brassard, C. Cr\'epeau and U. M. Maurer,
+``Generalized privacy amplification,''
+\emph{IEEE Trans. Inf. Theory}, vol.~41, no.~6, pp.~1915--1923, 1995.
+\href{https://crypto.cs.mcgill.ca/~crepeau/PDF/ASPUBLISHED/BBCM95.pdf}{Author-hosted journal copy}.
+
+\bibitem{Csiszar96}
+I. Csisz\'ar, ``Almost independence and secrecy capacity,''
+\emph{Problems Inf. Transm.}, vol.~32, no.~1, pp.~40--47, 1996.
+\url{https://www.mathnet.ru/eng/ppi319}.
+
+\bibitem{RW}
+R. Renner and S. Wolf,
+``Simple and tight bounds for information reconciliation and privacy amplification,''
+in \emph{Advances in Cryptology---ASIACRYPT 2005}, ser. Lecture Notes in Computer Science, vol.~3788. Springer, 2005, pp.~199--216.
+\url{https://crypto.ethz.ch/publications/RenWol05.html}.
+\end{thebibliography}
+\end{document}

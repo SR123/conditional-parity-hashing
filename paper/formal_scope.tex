@@ -1,0 +1,57 @@
+\section{Formal verification}\label{sec:verification}
+Theorem~\ref{thm:main} has been formalised in Lean~4
+(version~4.35.0-rc2), using Mathlib commit \texttt{065356127b1d}, and
+checked by the Lean kernel. The declaration is
+\texttt{ConditionalParityHashing.certified\_main} in
+\texttt{CertifiedMain.lean}. In the notation of this paper it states:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item $h-Ru\in\AEcone$ for every $0\le R\le b$;
+\item $z(N)>0$;
+\item $-97387436923/10^{12}\le\Ing(z)/z(N)\le-97387436922/10^{12}$;
+\item there exist an alphabet size $m$ and a law on $\{0,\ldots,m-1\}^4$
+whose entropy vector $f$ has $f(N)>0$ and $\Ing(f)/f(N)<-0.09738$.
+\end{enumerate}
+The parameter in the final existential quantifier is an alphabet size,
+rather than the block length used in the construction.
+
+The definitions in this statement have their ordinary mathematical
+meanings. \texttt{sourceLaw} is the rational law of Table~\ref{tab:source}.
+\texttt{finiteEntropy} computes Shannon entropy in bits from the
+finite-law marginals. \texttt{almostEntropicProfiles} is the topological
+closure of those entropy vectors, in the space of functions on all
+sixteen subsets of $N$, including the zero empty-set coordinate.
+The checked semantic bridge identifies membership with simultaneous
+$\varepsilon$-approximation of all coordinates by an actual finite law.
+\texttt{paperJ} is precisely~\eqref{eq:J}; \texttt{criticalRate} is
+$h(N)-h(AB)$, proved equal to $I(C;D\mid AB)$; \texttt{shiftedProfile}~$R$
+is $h-Ru$; and \texttt{candidate} is $z$.
+The general six-test criterion is also checked, through the ten-threshold
+argument and its six-to-ten reduction. The axiom report uses only
+\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+
+The formal proof uses the same bounded-deficit hashing argument as
+Appendix~\ref{app:hash}. Its source-threshold comparisons and score
+bounds use certified $20$-term artanh-series enclosures, while the written
+threshold comparisons are analytic and the independent Python checker
+uses the rational series in Appendix~\ref{app:numerical}.
+The finite-alphabet clause follows formally by density and continuity;
+the explicit fibre selection and sampling description of
+Section~\ref{sec:recipe}, and the path-optimality discussion, are not
+separately formalised. The proof package contains the pinned Lean sources (27 proof modules and
+one verification file), a fresh-directory rebuild script with the axiom
+report it produced, and two exact rational checkers written for the
+Python standard library. The paper, manuscript sources, Lean proof and
+verification evidence are available in the
+\href{https://github.com/SR123/conditional-parity-hashing}{GitHub repository}.
+The archived version is identified by
+\href{https://doi.org/10.5281/zenodo.23662511}{doi:10.5281/zenodo.23662511}.
+The paper and its sources are licensed under CC BY 4.0; code is
+licensed under Apache-2.0.
+
+\section{Discussion}
+The construction gives an inner bound for the full almost-entropic cone.
+The maximum Ingleton violation, extremality of $z$, and exact finite
+realisability of $z$ remain open. The six-test criterion suggests looking
+for other finite sources with local algebraic relations that permit
+larger structured subtractions. Extending the construction to other
+matroidal information profiles may provide further inner bounds.
